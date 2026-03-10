@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTO Bird Watch - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>🐦 CTO Bird Watch</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="posts.html">View Posts</a></li>
+                <li><a href="new-post.html">New Post</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Help Track Centrala's Bird Population</h2>
+                <p>Join the Centrala Trust for Ornithology in monitoring bird species across our urban and suburban areas. Your observations help urban planning and promote mental wellbeing in our community.</p>
+                <a href="register.html" class="cta-button">Start Bird Watching</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>📊 1,234 Posts</h3>
+                <p>Community sightings recorded</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔍 15 Species</h3>
+                <p>Different birds identified</p>
+            </div>
+            <div class="feature-card">
+                <h3>📍 12 Areas</h3>
+                <p>Across Centrala municipality</p>
+            </div>
+        </section>
+
+        <section class="recent-sightings">
+            <h2>Recent Sightings</h2>
+            <div class="sighting-preview">
+                <p><strong>Robin</strong> - Erenan - 5 mins ago</p>
+                <p><strong>Wood Pigeon</strong> - Bylyn - 2 hours ago</p>
+                <p><strong>Blue Tit</strong> - Holmer - Yesterday</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Centrala Trust for Ornithology. All rights reserved.</p>
+        <p>Images from Unsplash (copyright-free)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - CTO Bird Watch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>🐦 CTO Bird Watch</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html" class="active">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="posts.html">View Posts</a></li>
+                <li><a href="new-post.html">New Post</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>Join the CTO Bird Watch Community</h2>
+            
+            <form id="registerForm" onsubmit="return validateRegisterForm(event)">
+                <div class="form-group">
+                    <label for="username">Username *</label>
+                    <input type="text" id="username" name="username" required>
+                    <div class="error" id="usernameError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error" id="emailError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" required>
+                    <div class="error" id="passwordError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password *</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <div class="error" id="confirmError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="terms" required> I agree to the Terms and Conditions
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-primary">Create Account</button>
+                <p class="form-footer">Already have an account? <a href="login.html">Login here</a></p>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Centrala Trust for Ornithology</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CTO Bird Watch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>🐦 CTO Bird Watch</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html" class="active">Login</a></li>
+                <li><a href="posts.html">View Posts</a></li>
+                <li><a href="new-post.html">New Post</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>Member Login</h2>
+            
+            <form id="loginForm" onsubmit="return validateLoginForm(event)">
+                <div class="form-group">
+                    <label for="loginUsername">Username *</label>
+                    <input type="text" id="loginUsername" name="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="loginPassword">Password *</label>
+                    <input type="password" id="loginPassword" name="password" required>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="remember"> Remember me
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-primary">Sign In</button>
+                <p class="form-footer">Not a member? <a href="register.html">Register here</a></p>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Centrala Trust for Ornithology</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Post - CTO Bird Watch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>🐦 CTO Bird Watch</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="posts.html">View Posts</a></li>
+                <li><a href="new-post.html" class="active">New Post</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container wide-form">
+            <h2>Report a Bird Sighting</h2>
+            <p class="required-note">* Required fields</p>
+            
+            <form id="postForm" onsubmit="return validatePostForm(event)">
+                <!-- Username -->
+                <div class="form-group">
+                    <label for="postUsername">Username *</label>
+                    <input type="text" id="postUsername" name="username" required>
+                </div>
+
+                <!-- Location Dropdown (Centrala areas) -->
+                <div class="form-group">
+                    <label for="location">Location *</label>
+                    <select id="location" name="location" required>
+                        <option value="">Select a location</option>
+                        <option value="Erenan">Erenan</option>
+                        <option value="Brunad">Brunad</option>
+                        <option value="Bylyn">Bylyn</option>
+                        <option value="Docia">Docia</option>
+                        <option value="Marend">Marend</option>
+                        <option value="Pryn">Pryn</option>
+                        <option value="Zord">Zord</option>
+                        <option value="Yaean">Yaean</option>
+                        <option value="Frestin">Frestin</option>
+                        <option value="Stonyam">Stonyam</option>
+                        <option value="Ryall">Ryall</option>
+                        <option value="Ruril">Ruril</option>
+                        <option value="Keivia">Keivia</option>
+                        <option value="Tallan">Tallan</option>
+                        <option value="Adohad">Adohad</option>
+                        <option value="Obelyn">Obelyn</option>
+                        <option value="Holmer">Holmer</option>
+                        <option value="Vertwall">Vertwall</option>
+                    </select>
+                </div>
+
+                <!-- Date and Time -->
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="obsDate">Date of Observation *</label>
+                        <input type="date" id="obsDate" name="obsDate" required>
+                    </div>
+                    <div class="form-group half">
+                        <label for="obsTime">Time of Observation *</label>
+                        <input type="time" id="obsTime" name="obsTime" required>
+                    </div>
+                </div>
+
+                <!-- Bird Species Dropdown (CTO list) -->
+                <div class="form-group">
+                    <label for="birdSpecies">Bird Species *</label>
+                    <select id="birdSpecies" name="birdSpecies" required>
+                        <option value="">Select a species</option>
+                        <option value="Wood Pigeon">Wood Pigeon</option>
+                        <option value="House Sparrow">House Sparrow</option>
+                        <option value="Starling">Starling</option>
+                        <option value="Blue Tit">Blue Tit</option>
+                        <option value="Blackbird">Blackbird</option>
+                        <option value="Robin">Robin</option>
+                        <option value="Goldfinch">Goldfinch</option>
+                        <option value="Magpie">Magpie</option>
+                        <option value="Other">Other</option>
+                        <option value="Unknown">Unknown</option>
+                    </select>
+                </div>
+
+                <!-- Primary Activity Dropdown -->
+                <div class="form-group">
+                    <label for="activity">Primary Activity *</label>
+                    <select id="activity" name="activity" required>
+                        <option value="">Select activity</option>
+                        <option value="visit">Visit</option>
+                        <option value="feeding">Feeding</option>
+                        <option value="nesting">Nesting</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <!-- Duration -->
+                <div class="form-group">
+                    <label for="duration">Duration (minutes) *</label>
+                    <input type="number" id="duration" name="duration" min="1" max="1440" required>
+                </div>
+
+                <!-- Comments -->
+                <div class="form-group">
+                    <label for="comments">Free Text Comments</label>
+                    <textarea id="comments" name="comments" rows="4" placeholder="Describe what you observed..."></textarea>
+                    <div class="char-counter"><span id="charCount">0</span>/500 characters</div>
+                </div>
+
+                <!-- Image Upload -->
+                <div class="form-group">
+                    <label for="image">Photographic Image (optional)</label>
+                    <input type="file" id="image" name="image" accept=".jpg,.jpeg,.png">
+                    <p class="file-hint">Max 1.2MB. JPG or PNG only.</p>
+                    <div id="fileError" class="error"></div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Submit Sighting</button>
+                    <button type="reset" class="btn-secondary">Clear Form</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Centrala Trust for Ornithology</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bird Sightings - CTO Bird Watch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>🐦 CTO Bird Watch</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="posts.html" class="active">View Posts</a></li>
+                <li><a href="new-post.html">New Post</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="posts-header">
+            <h2>Bird Sightings Board</h2>
+            
+            <!-- Search Box -->
+            <div class="search-container">
+                <input type="text" id="searchBox" placeholder="Search by keyword..." onkeyup="searchPosts()">
+                <button onclick="searchPosts()" class="btn-search">Search</button>
+            </div>
+        </div>
+
+        <!-- Posts Container -->
+        <div id="postsContainer" class="posts-container">
+            <!-- Posts will be populated here by JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Centrala Trust for Ornithology</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
